@@ -234,15 +234,6 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    buttons = [
-                    [
-                        InlineKeyboardButton('🚸 ᴅᴇʟᴇᴛᴇ', callback_data='close_data'),
-                        InlineKeyboardButton('💞 sʜᴀʀᴇ', url="https://t.me/share/url?url=%2A%2A%F0%9F%98%B1+Cinema+World.%C2%B2%C2%B7%E2%81%B0+%F0%9F%98%B1+%0D%0A+%0D%0AWhatever+you+might+ask%2C+you+will+get+a+movie%2C+collection+of+movies+in+most+languages+%E2%80%8B%E2%80%8Bof+the+world..+%E2%9D%A4%EF%B8%8F+%0D%0A+%0D%0A%F0%9F%91%87+GROUP+LINK+%F0%9F%91%87%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions%0D%0Ahttps%3A%2F%2Ft.me%2FTrockersDiscussions")
-                    ],
-                    [
-                        InlineKeyboardButton(text=f'🌿 Fɪʟᴇ sɪᴢᴇ 【 {size} 】🌿', callback_data='gxneo')
-                    ]
-                    ]
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
